@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>
     <button
@@ -113,6 +114,7 @@
                         </div>
                     </div>
                 </div>
+                @can('update', $post)
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="card mb-4">
@@ -147,7 +149,7 @@
                 </div>
             </div>
         </footer>
-    </div>
+    </div >
 </div>
-
 @endsection
+
