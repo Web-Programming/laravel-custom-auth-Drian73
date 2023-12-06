@@ -19,11 +19,11 @@ class BaseController extends Controller
 
     public function sendError($error, $errorMessages = [], $code = 404) {
         $response = [
-            'success' => true,
-            'message' => $error,
+            'success' => false,
+            'message' => $errorMessages,
         ];
 
-        if (!empty($errorMessages)) {
+        if (!empty($errorMessages) && is_array($errorMessages)) {
             $response['data'] = $errorMessages;
         }
 
